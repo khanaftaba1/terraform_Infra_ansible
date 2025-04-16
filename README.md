@@ -3,8 +3,8 @@
 This project was created with passion, collaboration, and dedication by:
 
 - **Jasleen Kaur**
-- **Mykel**
-- **Anju**
+- **Michael Madukairo**
+- **Anju Adhikari**
 - **Aftab Khan**
 
 > _“Alone we can do so little, together we can do so much.”_ – **Helen Keller**
