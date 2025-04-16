@@ -2,7 +2,7 @@
 
 This project was created with passion, collaboration, and dedication by:
 
-- **Jasleen Kaur**
+- **Jasleen Kour Dhir**
 - **Michael Madukairo**
 - **Anju Adhikari**
 - **Aftab Khan**
