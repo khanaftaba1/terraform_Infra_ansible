@@ -1,0 +1,44 @@
+- name: Configure Web Servers
+  hosts: aws_ec2
+  become: yes
+
+  tasks:
+    - name: Update all packages
+      yum:
+        name: '*'
+        state: latest
+
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start and enable httpd service
+      service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Create /var/www/html directory
+      file:
+        path: /var/www/html
+        state: directory
+        mode: '0755'
+
+    - name: Add index.html with image from S3
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <html>
+            <body>
+              <h1>Hello from Jasleen, Mykel, Anju, Aftab through ansible</h1>
+              <p>Hostname/IP: {{ inventory_hostname }}</p>
+              <img src="https://aftab-is-pheonix.s3.us-east-1.amazonaws.com/ilovecats.jpg" alt="Image from S3" style="width:500px;height:auto;">
+            </body>
+          </html>
+
+    - name: Check connectivity (ping)
+      ping:
+
+    - name: Check service status
+      service_facts:

@@ -1,0 +1,13 @@
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-1
+filters:
+  tag:Name:
+    - VM3-Public
+    - VM4-Public
+keyed_groups:
+  - prefix: tag
+    key: Name
+compose:
+  ansible_host: public_ip_address
+  
