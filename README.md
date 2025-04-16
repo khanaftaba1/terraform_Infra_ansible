@@ -1,4 +1,10 @@
 ## 🙌 Made with 💻 + ❤️ by the Team
+Title: Two-Tier web application automation with Terraform, Ansible and GitHub Actions
+
+Course: ACS 730 Cloud Automation and Control Systems
+Section: Winter 2025 Cloud Architecture and Administration(CAA)
+Professor: Dhana Karuppusamy
+Date: April 15, 2025
 
 This project was created with passion, collaboration, and dedication by:
 
@@ -8,6 +14,10 @@ This project was created with passion, collaboration, and dedication by:
 - **Aftab Khan**
 
 > _“Alone we can do so little, together we can do so much.”_ – **Helen Keller**
+
+Description: The scope of this Final Project for ACS730, is to create a Terraform configuration file and architecture to provision 6 Virtual machines across 4 Public and 2 Private Subnets in different availability zones. The virtual machines will include 5 webservers and a Bastion Host. The first two Virtual Machines will be attached to an Application Load Balancer ALB and will be associated with an Auto Scaling Group, which will expand the instances according to the resource demand.
+Two route tables will be created to route traffic to the Internet Gateway for the Public Subnets and a NAT Gateway for the Private Subnets.
+in this project we will make use of the AWS Cloud9 environment for Terraform config files and to host the Ansible playbook files.
 
 ---
 
@@ -88,13 +98,19 @@ curl http://<private-ip-of-vm4>
 
 ## 🧹 Step 6: Destroy Infrastructure
 
-
 ```bash
 terraform destroy
+
+About This Project
+This project was completed by a collaborative effort of all team members as outlined at the outset, as a product of extensive brainstorming, research and exhaustive learning, some of the challenges encountered can be summarized as below.  
+Challenges:
+Deploying infrastructure with terraform config Files: debugging the many errors resulting from syntax mismatch while developing the various modules required to develop the ec2 infrastructure
+
+Applying Ansible Playbook: creating a yml code to deploy ansible play book was initially very challenging we used the examples on the class activities to over come the changes and were able to install Ansible on the cloud9 ide and run the playbook
+
+GitHub Actions: one of the greatest learnings and challenges of this project was uploading the Terraform codes from Cloud9 to GitHub and establishing the GitHub Actions to automate the workflow. We eventually used great help from Professor Dhana who gave us a clear direction on how to achieve this very important step.
+
+Conclusion: this project has played a vital role in exposing us to the great provisions of Cloud Automation using Infrastructure as a code (IaaC) and the extensible learning of Git and GitHub Actions.
+
 ```
-
-
-
-
-![image](https://github.com/user-attachments/assets/6e3c746b-6feb-42f8-9959-c2fc8b952b85)
 
