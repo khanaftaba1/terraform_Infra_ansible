@@ -88,7 +88,13 @@ curl http://<private-ip-of-vm4>
 
 ## 🧹 Step 6: Destroy Infrastructure
 
+
 ```bash
 terraform destroy
 ```
+
+
+
+
+![image](https://github.com/user-attachments/assets/6e3c746b-6feb-42f8-9959-c2fc8b952b85)
 
